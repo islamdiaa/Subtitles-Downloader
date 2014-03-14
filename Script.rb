@@ -18,7 +18,7 @@ def getsubtitle(path)
 	
 	url = URI.parse("http://api.thesubdb.com/")
 	req = Net::HTTP::Get.new(url.path + "?action=download&hash="+hash+"&language=en")
-      	req["User-Agent"] = "SubDB/1.0 (subtitle-downloader/1.0; http://github.com/manojmj92/subtitle-downloader)"
+      	req["User-Agent"] = "SubDB/1.0 (subtitle-downloader/1.0; http://github.com/islamdiaa/subtitles_downloader)"
      
         Net::HTTP.start(url.host, url.port) do |http|
         file = File.open(path+".srt","wb")
